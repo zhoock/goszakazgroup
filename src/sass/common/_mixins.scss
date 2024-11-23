@@ -1,0 +1,75 @@
+@use "sass:math";
+
+$phone: "max-width: 40em";
+$tablet: "min-width: 40.0625em";
+$desktop: "min-width: 64.0625em";
+
+@mixin breakpoint($point) {
+  // medium (>640)
+  @if $point == phone {
+    @media ($phone) {
+      @content;
+    }
+  }
+  // medium (641—1024)
+  @if $point == tablet {
+    @media ($tablet) {
+      @content;
+    }
+  }
+  // large (1024—1200)
+  @if $point == desktop {
+    @media ($desktop) {
+      @content;
+    }
+  }
+}
+
+//retina
+//
+//
+
+@mixin retina($url: false, $device-type: $phones) {
+  @media only screen and ($device-type) and (-webkit-min-device-pixel-ratio: 1.5) and (min-resolution: 1.5dppx) and (min-resolution: 144dpi) {
+    background-image: url($url);
+  }
+}
+
+//link
+//
+//
+
+@mixin link-colors(
+  $normal,
+  $hover: false,
+  $active: false,
+  $visited: false,
+  $focus: false
+) {
+  color: $normal;
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+}
+
+// Placeholder Selectors
+%contentBlock {
+  line-height: 20.51px;
+}

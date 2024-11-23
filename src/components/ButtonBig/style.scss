@@ -1,0 +1,53 @@
+// Defaults and variables
+@import "../../sass/common/bits.scss";
+// Mixins
+@import "../../sass/common/mixins";
+
+.button-big {
+  text-align: center;
+  width: 100%;
+  padding: 13.5px 0;
+  background: $lilac;
+  color: $white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &::after {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 19px;
+    left: 10px;
+    position: relative;
+    top: 4px;
+  }
+
+  &:hover {
+    background: $btnHover;
+  }
+
+  &:focus {
+    outline: 1.5px solid $black;
+  }
+
+  &_subscription {
+    &::after {
+      background-image: url("/src/images/svg/big-arrow.svg");
+    }
+  }
+
+  &_show {
+    &::after {
+      background-image: url("/src/images/svg/refresh-arrows-circle-with-clockwise-rotation1.svg");
+    }
+    display: show;
+    margin: 40px 0 20px;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

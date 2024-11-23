@@ -1,0 +1,54 @@
+// Defaults and variables
+@import "../../sass/common/bits.scss";
+// Mixins
+@import "../../sass/common/mixins";
+
+nav {
+  margin-left: auto;
+  // visibility: hidden;
+
+  // @include breakpoint(desktops) {
+  //   visibility: visible;
+  // }
+
+  ul {
+    li {
+      margin-right: 40px;
+      display: inline-block;
+
+      a {
+        color: $black;
+        text-decoration: none;
+
+        &.active,
+        &:hover {
+          color: $link-color-hover;
+          border-bottom: 1px solid $link-color-hover;
+          // pointer-events: none;
+          /* disables click event */
+        }
+
+        &.phone-wrapper {
+          &:hover {
+            border: none;
+          }
+
+          .phone-icon {
+            position: relative;
+            left: -3px;
+            top: -1px;
+          }
+
+          .phone-number {
+            color: $lilac;
+            border: none;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+// Defaults and variables
+@import "../common/bits.scss";
+// Mixins
+@import "../common/mixins";
+
+:root {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0; /* Set the default margin to 0 */
+  padding: 0; /* Set the default padding to 0 */
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth; /* Make the scrolling inside of any scrollable element smooth */
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto; /* Makes link undelines look better */
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%; /* Makes it responsive */
+  height: auto; /* Makes it responsive */
+  vertical-align: middle; /* Makes text next to inline images look better */
+  font-style: italic; /* If the images don't load it makes the alt decription look better */
+  background-repeat: no-repeat;
+  /* The background repeat and size are there if you want to load a picture first like a backroung image that is worse quality while the better quality image loads */
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Makes these elements inherit fonts */
+}
+
+body {
+  min-height: 100vh;
+  line-height: $base-line-height;
+  scroll-behavior: smooth; /* Makes normal scrolling smooth */
+}
+
+html {
+  font: $base-font-weight $base-font-size $base-font-family;
+}
+
+body,
+html {
+  background: $backgroundColor;
+}
+
+body {
+  @font-face {
+    font-family: "Futura PT";
+    src: url("fonts/FuturaPT-Medium.eot");
+    src:
+      local("Futura PT "),
+      local("FuturaPT"),
+      url("fonts/FuturaPT-Medium.eot?#iefix") format("embedded-opentype"),
+      url("fonts/FuturaPT-Medium.woff") format("woff"),
+      url("fonts/FuturaPT-Medium.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Futura PT Book";
+    src: url("fonts/FuturaPT-Book.eot");
+    src:
+      local("Futura PT Book"),
+      local("FuturaPT-Book"),
+      url("fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"),
+      url("fonts/FuturaPT-Book.woff") format("woff"),
+      url("fonts/FuturaPT-Book.ttf") format("truetype");
+    font-weight: normal;
+    font-weight: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    color: $black;
+  }
+
+  ul,
+  ol {
+    li {
+      list-style: none;
+    }
+  }
+}

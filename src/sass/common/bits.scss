@@ -1,0 +1,45 @@
+// Colors
+//
+// --------------------------------------------------
+
+$white: white;
+$black: #2f2222;
+$lilac: #5d71dd;
+$lightLilac: #7d8de4;
+$grey: #f7f8fd;
+$blue: #08186f;
+
+//Form
+$inputColor: #f5f5f5;
+$inputHover: #f9f9f9;
+$btnHover: #6c7dd8;
+
+$backgroundColor: #f9f9f9;
+$systemGreyColor: #acacac; // inactive link
+
+// Links
+//
+// --------------------------------------------------
+
+$link-color: $systemGreyColor;
+$link-color-hover: $lilac;
+
+// Font weights
+//
+// --------------------------------------------------
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Base Font
+//
+// --------------------------------------------------
+$base-font-family: "Futura PT Book";
+$base-font-weight: $regular;
+$base-font-color: $black;
+
+/* Base values */
+$base-font-size: 18px;
+$base-line-height: 23.8px;

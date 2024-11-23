@@ -1,0 +1,118 @@
+// Defaults and variables
+@import "../../sass/common/bits.scss";
+// Mixins
+@import "../../sass/common/mixins";
+
+//simple block
+.content-block {
+  padding: 40px;
+  margin-top: 40px;
+  background: $white;
+  border-radius: 20px;
+  position: relative;
+  transition: all 200ms ease;
+  background-repeat: no-repeat;
+
+  &:focus-within {
+    outline: 2px solid $lilac;
+  }
+
+  article {
+    visibility: hidden;
+
+    @include breakpoint(desktop) {
+      visibility: visible;
+    }
+  }
+
+  &_big {
+    padding-right: 120px;
+  }
+
+  &_no_content {
+    padding: 30px 30px 30px 40px;
+  }
+
+  &:hover {
+    box-shadow: 4px 8px 40px transparentize($blue, 0.8);
+    cursor: pointer;
+  }
+
+  //accent block
+  &_accent {
+    background: $lilac;
+    padding: 40px 30px;
+
+    &_with_picture {
+      background: none;
+      cursor: pointer;
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+
+      &:hover {
+        box-shadow: 4px 8px 40px transparentize($blue, 0.6);
+      }
+
+      button {
+        background: transparentize($white, 0.8);
+      }
+    }
+
+    &__btn {
+      background: $lightLilac;
+    }
+
+    &:hover:not(.content-block_accent_with_picture) {
+      background: $white;
+
+      button {
+        color: $lilac;
+        background: rgba(93, 113, 221, 0.05);
+      }
+
+      h1 {
+        color: $black;
+      }
+
+      time {
+        color: transparentize($black, 0.6);
+      }
+    }
+  }
+
+  //data block
+  &__data {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 16px;
+    color: transparentize($black, 0.6);
+    @extend %contentBlock;
+
+    &_accent {
+      top: auto;
+      bottom: 40px;
+      left: 30px;
+      color: $white;
+    }
+  }
+
+  //heading
+  &__heading {
+    font-size: 24px;
+    line-height: 30.77px;
+    margin-bottom: 20px;
+
+    &_accent {
+      color: $white;
+    }
+  }
+
+  //content
+  &__content {
+    color: transparentize($black, 0.6);
+  }
+}

@@ -1,0 +1,30 @@
+// Defaults and variables
+@import "../../sass/common/bits.scss";
+// Mixins
+@import "../../sass/common/mixins";
+
+header {
+  width: 100%;
+  height: 300px;
+  background: #c4c4c4 left 34% / cover no-repeat
+    url(/src/images/f514e05d9a86098f5643e77c9fc887ad.jpeg);
+
+  .banner {
+    background: $white;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    visibility: hidden;
+
+    @include breakpoint(desktop) {
+      visibility: visible;
+    }
+
+    a {
+      border: none;
+    }
+  }
+}

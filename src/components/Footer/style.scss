@@ -1,0 +1,38 @@
+// Defaults and variables
+@import "../../sass/common/bits.scss";
+// Mixins
+@import "../../sass/common/mixins";
+
+footer {
+  background: transparentize($lilac, 0.95);
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    visibility: hidden;
+
+    @include breakpoint(desktop) {
+      visibility: visible;
+    }
+
+    nav {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    .copyright {
+      font-size: 14px;
+    }
+  }
+}

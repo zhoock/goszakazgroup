@@ -1,0 +1,61 @@
+// Defaults and variables
+@import "../../sass/common/bits.scss";
+// Mixins
+@import "../../sass/common/mixins";
+
+//button
+.button {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparentize($lilac, 0.95);
+  color: $lilac;
+  margin-bottom: 30px;
+  cursor: pointer;
+  @extend %contentBlock;
+
+  &:hover {
+    background: transparentize($lilac, 0.8);
+    transition: all 200ms ease;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_accent {
+    background: $lightLilac;
+    color: $white;
+
+    &:hover {
+      background: transparentize($white, 0.6);
+      transition: all 200ms ease;
+    }
+  }
+
+  &_pointer {
+    padding: 10px 18px 10px 16px;
+    margin-bottom: 0;
+    font-size: 18px;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background-image: url("/src/images/svg/Vector.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background: transparentize($lilac, 0.85);
+    }
+
+    &:active {
+      background: transparentize($lilac, 0.8);
+    }
+  }
+}
