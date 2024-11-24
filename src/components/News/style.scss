@@ -49,7 +49,6 @@
       }
 
       &:not(:last-child) {
-        // border-bottom: none;
 
         @include breakpoint(desktop) {
           border-bottom: 1px solid transparentize($black, 0.9);

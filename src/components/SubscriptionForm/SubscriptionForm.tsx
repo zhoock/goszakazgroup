@@ -1,6 +1,7 @@
 import React from "react";
-import "./style.scss";
 import ButtonBig from "../ButtonBig/ButtonBig";
+import "./style.scss";
+
 
 export default function SubscriptionForm() {
   return (

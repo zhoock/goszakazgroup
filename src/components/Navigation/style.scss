@@ -5,11 +5,6 @@
 
 nav {
   margin-left: auto;
-  // visibility: hidden;
-
-  // @include breakpoint(desktops) {
-  //   visibility: visible;
-  // }
 
   ul {
     li {
@@ -24,8 +19,6 @@ nav {
         &:hover {
           color: $link-color-hover;
           border-bottom: 1px solid $link-color-hover;
-          // pointer-events: none;
-          /* disables click event */
         }
 
         &.phone-wrapper {

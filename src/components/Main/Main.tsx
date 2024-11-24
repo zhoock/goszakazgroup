@@ -7,7 +7,6 @@ import News from "../News/News";
 import SubscriptionForm from "../SubscriptionForm/SubscriptionForm";
 import ButtonBig from "../ButtonBig/ButtonBig";
 
-import "./style.scss";
 
 export default function Main() {
   return (
@@ -50,39 +49,41 @@ export default function Main() {
               />
             </div>
 
-            <div className="medium-4 column">
-              <ContentBlock
-                classes={{
-                  accent: "content-block_accent",
-                  picture: "content-block_accent_with_picture",
-                  btn: "button_accent",
-                  heading: "content-block__heading_accent",
-                  data: "content-block__data_accent",
-                }}
-                height={"400px"}
-                backgroundImg={`url(${Image1})`}
-                buttonText="Очень длинная категория 2"
-                headingText="Управление ИТ-активами – скучная рутина или творческая задача?"
-              />
-            </div>
-            <div className="medium-8 column">
-              <ContentBlock
-                classes={{ noСontent: "content-block_no_content" }}
-                height={"180px"}
-                buttonText="Категория 1"
-                headingText="Управление ИТ-активами – скучная рутина или творческая задача слово слово и еще длинное слово после чего ..."
-              />
-            </div>
-            <div className="medium-8 column">
-              <ContentBlock
-                classes={{ noСontent: "content-block_no_content" }}
-                height={"180px"}
-                buttonText="Категория 1"
-                headingText="ITAM&SAMDay – самая настоящая удача!"
-              />
+            <div className="hide-for-medium-down">
+              <div className="medium-4 column">
+                <ContentBlock
+                  classes={{
+                    accent: "content-block_accent",
+                    picture: "content-block_accent_with_picture",
+                    btn: "button_accent",
+                    heading: "content-block__heading_accent",
+                    data: "content-block__data_accent",
+                  }}
+                  height={"400px"}
+                  backgroundImg={`url(${Image1})`}
+                  buttonText="Очень длинная категория 2"
+                  headingText="Управление ИТ-активами – скучная рутина или творческая задача?"
+                />
+              </div>
+              <div className="medium-8 column">
+                <ContentBlock
+                  classes={{ noСontent: "content-block_no_content" }}
+                  height={"180px"}
+                  buttonText="Категория 1"
+                  headingText="Управление ИТ-активами – скучная рутина или творческая задача слово слово и еще длинное слово после чего ..."
+                />
+              </div>
+              <div className="medium-8 column">
+                <ContentBlock
+                  classes={{ noСontent: "content-block_no_content" }}
+                  height={"180px"}
+                  buttonText="Категория 1"
+                  headingText="ITAM&SAMDay – самая настоящая удача!"
+                />
+              </div>
             </div>
 
-            <div className="medium-8 column">
+            <div className="medium-8 column hide-for-medium-down">
               <ContentBlock
                 height={"400px"}
                 buttonText="Категория 1"
@@ -104,7 +105,7 @@ export default function Main() {
               />
             </div>
 
-            <div className="medium-4 column">
+            <div className="medium-4 column hide-for-medium-down">
               <ContentBlock
                 classes={{
                   accent: "content-block_accent",
