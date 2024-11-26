@@ -14,7 +14,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`button ${classes ? classes.btn : ""}`}
+      className={`button ${classes ? classes.btn : ""}`} type="button"
     >
       {buttonText}
     </button>
